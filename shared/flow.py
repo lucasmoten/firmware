@@ -9,6 +9,7 @@ from main import settings
 
 from actions import *
 from choosers import *
+from games import *
 from multisig import make_multisig_menu
 from paper import make_paper_wallet
 from address_explorer import address_explore
@@ -195,6 +196,16 @@ EmptyWallet = [
     MenuItem('Settings', menu=SettingsMenu),
 ]
 
+GameMenu = [
+    MenuItem('Black Jack', f=game_blackjack),
+    MenuItem('Chess', f=game_chess),
+    MenuItem('Memory Match', f=game_memory),
+    MenuItem('Number Guess', f=game_numberguess),
+    MenuItem('Pass the Pigs', f=game_passthepigs),
+    MenuItem('Snake', f=game_snake),
+    MenuItem('Space Race', f=game_spacerace),
+    MenuItem('Taco Pleb', f=game_tacopleb),
+]
 
 # In operation, normal system, after a good PIN received.
 NormalSystem = [
@@ -205,6 +216,7 @@ NormalSystem = [
     MenuItem('Secure Logout', f=logout_now),
     MenuItem('Advanced', menu=AdvancedNormalMenu),
     MenuItem('Settings', menu=SettingsMenu),
+    MenuItem('Ready to Game', menu=GameMenu),
 ]
 
 
